@@ -344,6 +344,7 @@ footer {
 
 /* Mobile Responsiveness */
 /* Mobile responsiveness */
+/* For devices with a max-width of 768px */
 @media (max-width: 768px) {
     .service-container {
         flex-direction: column;
@@ -358,8 +359,22 @@ footer {
     .form-container {
         width: 90%;
     }
+
+    .warranty-box {
+        flex: 1 1 100%;
+        text-align: left; /* Stack items on smaller screens */
+    }
+
+    .icon {
+        margin-right: 10px;
+    }
+
+    .warranty-text {
+        text-align: left;
+    }
 }
 
+/* For devices with a max-width of 480px */
 @media (max-width: 480px) {
     header h1 {
         font-size: 1.8rem;
@@ -378,15 +393,3 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
-    .warranty-box {
-        flex: 1 1 100%;
-        text-align: left; /* Stack items on smaller screens */
-    }
-    .icon {
-        margin-right: 10px;
-    }
-    .warranty-text {
-        text-align: left;
-    }
-}
