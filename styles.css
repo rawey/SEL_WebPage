@@ -170,6 +170,178 @@ footer {
     width: 100%;
 }
 
+.logo img {
+    width: 300px; /* Increase icon size */
+}
+
+.warranty {
+    position: relative;
+    overflow: hidden; /* Ensures no overflow */
+}
+
+.warranty-background {
+    background-image: url('assets/openart-image_qWkdnwt1_1726777493087_raw.png'); /* Background image */
+    background-size: cover; /* Ensures the image fills the section */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents tiling */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Sends the background behind the content */
+}
+
+.warranty-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    color: #fff;
+}
+
+.warranty-header-box {
+    background-color: rgba(255, 250, 250, 0.9); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 0 auto 30px auto; /* Center the box and add space at the bottom */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
+    text-align: center;
+}
+
+.warranty-header-box h2 {
+    color: #fca218; /* Matching the color scheme */
+    font-size: 36px; /* Slightly larger font for the header */
+    margin: 0 0 10px 0; /* Margin at the bottom */
+}
+
+.warranty-header-box p {
+    color: #000000; /* Text color */
+    font-size: 18px; /* Font size for the paragraph */
+    margin: 0; /* Remove default margin */
+    line-height: 1.5; /* Line height for readability */
+    font-weight: bold;
+}
+
+.warranty-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.warranty-box {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent box for readability */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    flex: 1 1 45%;
+    max-width: 45%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    flex-basis: 100px; /* Increase the space for larger icons */
+    margin-right: 20px;
+}
+
+.icon img {
+    width: 125px; /* Increase icon size */
+    height: 125px; /* Increase icon size */
+}
+
+.warranty-text {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.warranty-box h4 {
+    color: #fca218;
+    margin-bottom: 10px;
+}
+
+.warranty-box ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.warranty-box li {
+    margin: 10px 0;
+}
+
+.icon {
+    flex-basis: 100px; /* Increase the space for larger icons */
+    margin-right: 20px;
+}
+
+.icon img {
+    width: 125px; /* Increase icon size */
+    height: 125px; /* Increase icon size */
+}
+
+.warranty-text {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.warranty-box h4 {
+    color: #fca218;
+    margin-bottom: 10px;
+}
+
+.warranty-box ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.warranty-box li {
+    margin: 10px 0;
+}
+
+/* .warranty h2 {
+    color: #fff;
+    margin-bottom: 30px;
+} */
+
+.comparison {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.comparison h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Adjust color as needed */
+}
+
+.comparison table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison th, .comparison td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.comparison th {
+    background-color: #fca218; /* Adjust color as needed */
+    color: #fff;
+}
+
+.comparison tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
 /* Mobile Responsiveness */
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -203,5 +375,18 @@ footer {
 
     .contact-form h2 {
         font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .warranty-box {
+        flex: 1 1 100%;
+        text-align: left; /* Stack items on smaller screens */
+    }
+    .icon {
+        margin-right: 10px;
+    }
+    .warranty-text {
+        text-align: left;
     }
 }
