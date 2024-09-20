@@ -8,11 +8,14 @@ document.getElementById('info-form').addEventListener('submit', function(event) 
 const translations = {
     en: {
         aboutUs: "About Us",
-        aboutText: "Founded in 2017, we have been providing top-tier solar solutions for over a decade. Our mission is to help you harness the power of solar energy while reducing your carbon footprint and energy costs.",
+        aboutText: "At SEL Florida, we've been dedicated to providing reliable solar energy solutions since 2017. Our mission is to empower homeowners and businesses to reduce their carbon footprint while lowering energy costs. We specialize in the design, installation, and maintenance of solar panel systems, offering cutting-edge technology and tailored solutions to meet the unique needs of our clients. With a commitment to sustainability and customer satisfaction, we strive to make clean, renewable energy accessible and affordable for all.",
         servicesTitle: "Our Services",
         service1: "Solar Panel Installation",
+        service1_text: "We provide professional installation services to help you harness the power of solar energy.",
         service2: "Energy Storage Solutions",
+        service2_text: "Store energy for later use and maximize the benefits of your solar power system.",
         service3: "Free Consultation",
+        service3_text: "Get expert advice on how solar energy can reduce your bills and carbon footprint.",
         contactTitle: "Contact Us for More Information",
         contactName: "Name:",
         contactEmail: "Email:",
@@ -61,11 +64,14 @@ const translations = {
     },
     es: {
         aboutUs: "Sobre Nosotros",
-        aboutText: "Fundada en 2017, hemos estado brindando soluciones solares de primer nivel durante más de una década. Nuestra misión es ayudarle a aprovechar la energía solar mientras reduce su huella de carbono y sus costos de energía.",
+        aboutText: "En SEL Florida, nos hemos dedicado a proporcionar soluciones confiables de energía solar desde 2017. Nuestra misión es ayudar a los propietarios y empresas a reducir su huella de carbono mientras disminuyen los costos de energía. Nos especializamos en el diseño, la instalación y el mantenimiento de sistemas de paneles solares, ofreciendo tecnología de vanguardia y soluciones personalizadas para satisfacer las necesidades únicas de nuestros clientes. Con un compromiso con la sostenibilidad y la satisfacción del cliente, nos esforzamos por hacer que la energía limpia y renovable sea accesible y asequible para todos.",
         servicesTitle: "Nuestros Servicios",
         service1: "Instalación de Paneles Solares",
+        service1_text: "Ofrecemos servicios de instalación profesional para ayudarle a aprovechar la energía solar.",
         service2: "Soluciones de Almacenamiento de Energía",
-        service3: "Consulta Gratis",
+        service2_text: "Almacene energía para su uso posterior y maximice los beneficios de su sistema de energía solar.",
+        service3: "Consulta Gratuita",
+        service3_text: "Obtenga asesoramiento experto sobre cómo la energía solar puede reducir sus facturas y su huella de carbono.",
         contactTitle: "Contáctenos para más información",
         contactName: "Nombre:",
         contactEmail: "Correo Electrónico:",
@@ -125,8 +131,11 @@ function translateToSpanish() {
     document.querySelector('.about p').innerText = translations[currentLang].aboutText;
     document.querySelector('.services h2').innerText = translations[currentLang].servicesTitle;
     document.querySelectorAll('.service-box h3')[0].innerText = translations[currentLang].service1;
+    document.querySelectorAll('.service-box p')[0].innerText = translations[currentLang].service1_text;
     document.querySelectorAll('.service-box h3')[1].innerText = translations[currentLang].service2;
+    document.querySelectorAll('.service-box p')[1].innerText = translations[currentLang].service2_text;
     document.querySelectorAll('.service-box h3')[2].innerText = translations[currentLang].service3;
+    document.querySelectorAll('.service-box p')[2].innerText = translations[currentLang].service3_text;
     document.querySelector('.contact-form h2').innerText = translations[currentLang].contactTitle;
     document.querySelector('label[for="name"]').innerText = translations[currentLang].contactName;
     document.querySelector('label[for="email"]').innerText = translations[currentLang].contactEmail;
@@ -178,6 +187,15 @@ function translateToSpanish() {
 
 // Add event listener to the button
 document.getElementById('translate-btn').addEventListener('click', translateToSpanish);
+
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    const isChecked = document.getElementById('marketing-consent').checked || document.getElementById('marketing-consent-es').checked;
+    if (!isChecked) {
+        alert('You must agree to the terms to proceed.');
+        event.preventDefault(); // Prevent the form from being submitted
+    }
+});
 
 
 // function showDetails(service) {

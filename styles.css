@@ -163,6 +163,26 @@ button:hover, #translate-btn:hover {
     background-color: #088e50;
 }
 
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    margin: -05px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin-left: -40px; /* Shift both checkbox and text to the left */
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: -40px; /* Control space between checkbox and text */
+    margin-top: 13px;   /* Slightly raise checkbox to align with text */
+}
+
+.checkbox-label label {
+    margin-top: -40px;
+}
+
+
 footer {
     background-color: #333;
     color: white;
