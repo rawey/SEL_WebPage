@@ -470,6 +470,10 @@ footer {
 /* For devices with a max-width of 768px */
 @media (max-width: 768px) {
 
+    .logo {
+        max-width: 125px;
+    }
+
     header {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items */
