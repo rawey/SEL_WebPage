@@ -469,6 +469,25 @@ footer {
 /* Mobile responsiveness */
 /* For devices with a max-width of 768px */
 @media (max-width: 768px) {
+
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    header p {
+        font-size: 0.9rem; /* Smaller paragraph */
+    }
+
+    #translate-btn {
+        font-size: 0.9rem; /* Smaller button */
+        padding: 8px 15px; /* Adjust padding */
+    }    
+
     .service-container {
         flex-direction: column;
         align-items: center;
