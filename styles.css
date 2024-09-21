@@ -535,11 +535,11 @@ footer {
     }
 
     header h1 {
-        font-size: 1.5rem; /* Smaller heading for mobile */
+        font-size: 1.3rem; /* Smaller heading for mobile */
     }
 
     header p {
-        font-size: 1rem; /* Smaller paragraph */
+        font-size: 0.9rem; /* Smaller paragraph */
     }
 
     #translate-btn {
@@ -555,6 +555,10 @@ footer {
     .service-box {
         width: 95%; /* Wider boxes for smaller screens */
         margin-bottom: 15px; /* Less margin for compactness */
+    }
+
+    .container {
+        width: 95%; /* Wider form for easier input */
     }
 
     .form-container {
