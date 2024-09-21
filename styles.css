@@ -531,7 +531,7 @@ footer {
     header {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items */
-        min-height: 45vh;
+        min-height: 80vh;
         height: auto; /* Allow height to adjust */
     }
 
@@ -582,9 +582,3 @@ footer {
     }
 }
 
-@media (max-aspect-ratio: 13/9) and (orientation: landscape) {
-
-    header {
-        height: 60vh; /* Larger height for landscape devices with wider screens */
-    }
-}
