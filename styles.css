@@ -45,39 +45,8 @@ header h1, header p {
 }
 
 #logo-img {
-    width: 100px;
-    max-width: 250px;
+    width: 250px;
     height: auto; /* Auto-resize to maintain aspect ratio */
-}
-
-.location-info {
-    position: relative;
-    bottom: 10px; /* Adjust this value to move the text higher or lower */
-    right: 20px; /* Adjust this value to move the text more left or right */
-    color: white;
-    text-align: right;
-    right: 0; /* Reset positioning */
-    bottom: 0; /* Reset positioning */
-    font-size: 1em;
-    padding: 10px;
-    border-radius: 8px; /* Optional: can remove for a simpler look */
-}
-
-.location-info p {
-    margin: 0;
-    padding: 5px 0;
-    font-size: 1.1em;
-}
-
-/* Hover effect for location names */
-.location {
-    color: #ffffff; /* Default color for location text */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-
-.location:hover {
-    color: #52aee1; /* Change to blue on hover */
 }
 
 button, #translate-btn {
@@ -239,18 +208,17 @@ button:hover, #translate-btn:hover {
 
 .checkbox-container {
     display: flex;
-    flex-direction: row; /* Ensure checkbox and text are in a row */
-    align-items: center;
+    align-items: flex-start;
     margin: -5px 0;
     font-size: 14px;
     line-height: 1.5;
     color: #333;
-    margin-left: 0; /* Shift both checkbox and text to the left */
+    margin-left: -40px; /* Shift both checkbox and text to the left */
 }
 
 .checkbox-container input[type="checkbox"] {
-    margin-right: 10px; /* Control space between checkbox and text */
-    margin-top: 0;   /* Slightly raise checkbox to align with text */
+    margin-right: -35px; /* Control space between checkbox and text */
+    margin-top: 13px;   /* Slightly raise checkbox to align with text */
 }
 
 .checkbox-label label {
