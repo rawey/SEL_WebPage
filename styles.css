@@ -564,6 +564,7 @@ footer {
     .warranty-box {
         flex: 1 1 100%; /* Stack warranty boxes */
         text-align: left; /* Left-align text */
+        width: 95%;
     }
 
     .icon {
