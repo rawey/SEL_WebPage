@@ -8,6 +8,7 @@ document.getElementById('info-form').addEventListener('submit', function(event) 
 const translations = {
     en: {
         aboutUs: "About Us",
+        location: "Locations: Tampa, Orlando, and bordering towns.",
         aboutText: "At SEL Florida, we've been dedicated to providing reliable solar energy solutions since 2017. Our mission is to empower homeowners and businesses to reduce their carbon footprint while lowering energy costs. We specialize in the design, installation, and maintenance of solar panel systems, offering cutting-edge technology and tailored solutions to meet the unique needs of our clients. With a commitment to sustainability and customer satisfaction, we strive to make clean, renewable energy accessible and affordable for all.",
         servicesTitle: "Our Services",
         service1: "Solar Panel Installation",
@@ -60,10 +61,12 @@ const translations = {
             ["Home Value", "Your home value stays the same", "Your home value increases from the additional value of the system"],
             ["Home Sale Impact", "Doesn't help your home sell any faster", "Your home sells 20% faster & you can transfer the system"],
             ["Tax Incentives", "No tax incentives", "Take advantage of Government Tax Incentives"]
-        ]
+        ],
+        consent: "I agree to receive recurring automated marketing text messages at the phone number provided. Consent is not a condition to purchase. Msg & data rates may apply. Msg frequency varies. Reply HELP for help and STOP to cancel."
     },
     es: {
         aboutUs: "Sobre Nosotros",
+        location: "Ubicaciones: Tampa, Orlando y pueblos limítrofes.",
         aboutText: "En SEL Florida, nos hemos dedicado a proporcionar soluciones confiables de energía solar desde 2017. Nuestra misión es ayudar a los propietarios y empresas a reducir su huella de carbono mientras disminuyen los costos de energía. Nos especializamos en el diseño, la instalación y el mantenimiento de sistemas de paneles solares, ofreciendo tecnología de vanguardia y soluciones personalizadas para satisfacer las necesidades únicas de nuestros clientes. Con un compromiso con la sostenibilidad y la satisfacción del cliente, nos esforzamos por hacer que la energía limpia y renovable sea accesible y asequible para todos.",
         servicesTitle: "Nuestros Servicios",
         service1: "Instalación de Paneles Solares",
@@ -116,7 +119,8 @@ const translations = {
             ["Valor de la casa", "El valor de su casa permanece igual", "El valor de su casa aumenta con el valor adicional del sistema"],
             ["Impacto en la venta de la casa", "No ayuda a que su casa se venda más rápido", "Su casa se vende un 20% más rápido y puede transferir el sistema"],
             ["Incentivos fiscales", "Sin incentivos fiscales", "Aproveche los incentivos fiscales del gobierno"]
-        ]
+        ],
+        consent: "Acepto recibir mensajes de texto automáticos recurrentes de marketing en el número de teléfono proporcionado. El consentimiento no es una condición para la compra. Pueden aplicarse tarifas de mensajes y datos. La frecuencia de los mensajes varía. Responde AYUDA para obtener ayuda y STOP para cancelar."
     }
 };
 
@@ -129,6 +133,7 @@ function translateToSpanish() {
     // Existing translations...
     document.querySelector('.about h2').innerText = translations[currentLang].aboutUs;
     document.querySelector('.about p').innerText = translations[currentLang].aboutText;
+    document.querySelector('.location-info p').innerText = translations[currentLang].location;
     document.querySelector('.services h2').innerText = translations[currentLang].servicesTitle;
     document.querySelectorAll('.service-box h3')[0].innerText = translations[currentLang].service1;
     document.querySelectorAll('.service-box p')[0].innerText = translations[currentLang].service1_text;
@@ -137,6 +142,7 @@ function translateToSpanish() {
     document.querySelectorAll('.service-box h3')[2].innerText = translations[currentLang].service3;
     document.querySelectorAll('.service-box p')[2].innerText = translations[currentLang].service3_text;
     document.querySelector('.contact-form h2').innerText = translations[currentLang].contactTitle;
+    document.querySelector('label[for="marketing-consent"]').innerText = translations[currentLang].consent;
     document.querySelector('label[for="name"]').innerText = translations[currentLang].contactName;
     document.querySelector('label[for="email"]').innerText = translations[currentLang].contactEmail;
     document.querySelector('label[for="phone"]').innerText = translations[currentLang].contactPhone;
@@ -172,7 +178,7 @@ function translateToSpanish() {
     document.querySelector('.warranty-box:nth-child(6) ul li').innerText = translations[currentLang].sunnovaInsuredDetails[0];
 
     // Comparison section translations
-    document.querySelector('.comparison h2').innerText = translations[currentLang].comparisonHeader;
+    document.querySelector('.comparison h2').innerText = translations[currentLang].comparisonHeader;    
     const comparisonRows = document.querySelectorAll('.comparison table tr');
     translations[currentLang].comparisonRows.forEach((row, index) => {
         comparisonRows[index + 1].children[0].innerText = row[0];
@@ -196,6 +202,16 @@ document.querySelector('form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the form from being submitted
     }
 });
+
+document.getElementById('info-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    
+    // Here you can add any code to handle form submission, like sending data via AJAX
+
+    // Clear the form fields
+    this.reset();
+});
+
 
 
 // function showDetails(service) {

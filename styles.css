@@ -13,15 +13,68 @@ body {
 }
 
 header {
-    background-color: black;
+    background-image: url('assets/renewable_energy.jpg');
+    background-size: cover;
+    background-position: center 60%;
     color: white;
-    padding: 40px 20px;
     text-align: center;
+    padding: 50px 20px; /* Padding around the header */
+    position: relative; /* Positioning context for the header box */
+    height: 30vh; /* Set header height to fill the viewport */
+}
+
+.header-box {
+    background-color: rgba(0, 0, 0, 0.75); /* Dark background with transparency */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    padding: 20px; /* Space inside the box */
+    width: 100%; /* Make the box fill the header width */
+    height: 100%; /* Make the box fill the header height */
+    position: absolute; /* Position it absolutely within the header */
+    top: 0; /* Align to the top of the header */
+    left: 0; /* Align to the left of the header */
+    display: flex; /* Use flexbox for centering the content */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    z-index: 1; /* Ensure it appears above the background */
+}
+
+/* Add styles for the text */
+header h1, header p {
+    margin: 10px 0; /* Add some margin for spacing */
 }
 
 #logo-img {
-    width: 120px;
+    width: 250px;
     height: auto; /* Auto-resize to maintain aspect ratio */
+}
+
+.location-info {
+    position: absolute;
+    bottom: 10px; /* Adjust this value to move the text higher or lower */
+    right: 20px; /* Adjust this value to move the text more left or right */
+    color: white;
+    text-align: right;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 8px; /* Optional: can remove for a simpler look */
+}
+
+.location-info p {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 1.1em;
+}
+
+/* Hover effect for location names */
+.location {
+    color: #ffffff; /* Default color for location text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.location:hover {
+    color: #52aee1; /* Change to blue on hover */
 }
 
 button, #translate-btn {
@@ -54,16 +107,33 @@ button:hover, #translate-btn:hover {
     color: #333;
 }
 
-.container {
-    width: 80%; /* Consistent width across the site */
-    margin: 0 auto; /* Centers the container */
-    text-align: center; /* Center text within container */    
+.about {
+    background: linear-gradient(to bottom right, #fca118bb, #e97100);
+    position: relative;
+    color: white;
+    text-align: center;
 }
 
-.about {
-    background-color: #fca118bb;
-    color: #000000;
-    padding: 40px 0;
+.about:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.about p {    
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container {
+    position: relative; /* Ensure content is above overlay */
+    padding: 20px;
+    border-radius: 10px;    
 }
 
 .service-container {
@@ -166,7 +236,7 @@ button:hover, #translate-btn:hover {
 .checkbox-container {
     display: flex;
     align-items: flex-start;
-    margin: -05px 0;
+    margin: -5px 0;
     font-size: 14px;
     line-height: 1.5;
     color: #333;
@@ -174,7 +244,7 @@ button:hover, #translate-btn:hover {
 }
 
 .checkbox-container input[type="checkbox"] {
-    margin-right: -40px; /* Control space between checkbox and text */
+    margin-right: -35px; /* Control space between checkbox and text */
     margin-top: 13px;   /* Slightly raise checkbox to align with text */
 }
 
@@ -334,36 +404,93 @@ footer {
 } */
 
 .comparison {
-    margin: 50px auto;
-    padding: 20px;
-    max-width: 1200px;
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
 }
 
 .comparison h2 {
+    font-size: 2em;
     text-align: center;
     margin-bottom: 20px;
-    color: #333; /* Adjust color as needed */
+    animation: slideDown 1s ease-out; /* Slide-in animation for the title */
 }
 
-.comparison table {
+.comparison-table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 1.2em;
+    animation: scaleUp 1s ease-in-out; /* Scale-up animation for the table */
 }
 
-.comparison th, .comparison td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+.comparison-table th,
+.comparison-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.comparison th {
-    background-color: #fca218; /* Adjust color as needed */
-    color: #fff;
+.comparison-table th {
+    background-color: #52aee1; /* Blue for header */
+    color: white;
 }
 
-.comparison tr:nth-child(even) {
-    background-color: #f2f2f2;
+.comparison-table td:hover {
+    background-color: #ffe0b2; /* Orange on hover */
+    /* transform: scale(1.05); Slight zoom on hover */
 }
+
+.comparison-table th,
+.comparison-table td {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.about h2, .about p {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s forwards; /* Apply fade-in animation */
+}
+
+.about h2 {
+    animation-delay: 0.2s; /* Delay for the heading */
+}
+
+.about p {
+    animation-delay: 0.4s; /* Delay for the paragraph */
+}
+
 
 /* Mobile Responsiveness */
 /* Mobile responsiveness */
