@@ -20,7 +20,7 @@ header {
     text-align: center;
     padding: 50px 20px; /* Padding around the header */
     position: relative; /* Positioning context for the header box */
-    height: 30vh; /* Set header height to fill the viewport */
+    height: 40vh; /* Set header height to fill the viewport */
 }
 
 .header-box {
