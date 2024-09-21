@@ -476,7 +476,8 @@ footer {
     header {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items */
-        height: auto;
+        min-height: 40vh;
+        height: auto; /* Allow height to adjust */
     }
 
     header h1 {
@@ -530,7 +531,7 @@ footer {
     header {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items */
-        min-height: 50vh;
+        min-height: 45vh;
         height: auto; /* Allow height to adjust */
     }
 
