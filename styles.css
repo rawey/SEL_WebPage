@@ -50,7 +50,6 @@ header h1, header p {
 }
 
 button, #translate-btn {
-    position: relative;
     background-color: #fca218; /* Use one of your main colors */
     color: #fff; /* White text */
     padding: 10px 20px;
