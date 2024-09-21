@@ -524,22 +524,22 @@ footer {
 @media (max-width: 480px) {
 
     #logo-img {
-        max-width: 100px; /* Further reduce logo size */
+        max-width: 150px; /* Further reduce logo size */
     }
 
     header {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items */
-        min-height: 60vh;
+        min-height: 50vh;
         height: auto; /* Allow height to adjust */
     }
 
     header h1 {
-        font-size: 1.2rem; /* Smaller heading for mobile */
+        font-size: 1.5rem; /* Smaller heading for mobile */
     }
 
     header p {
-        font-size: 0.8rem; /* Smaller paragraph */
+        font-size: 1rem; /* Smaller paragraph */
     }
 
     #translate-btn {
