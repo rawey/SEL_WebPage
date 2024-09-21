@@ -521,56 +521,5 @@ footer {
 }
 
 /* For devices with a max-width of 480px */
-@media (max-width: 480px) {
 
-    #logo-img {
-        max-width: 100px; /* Further reduce logo size */
-    }
-
-    header {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
-        height: auto; /* Allow height to adjust */
-    }
-
-    header h1 {
-        font-size: 1.2rem; /* Smaller heading for mobile */
-    }
-
-    header p {
-        font-size: 0.8rem; /* Smaller paragraph */
-    }
-
-    #translate-btn {
-        font-size: 0.8rem; /* Smaller button */
-        padding: 6px 12px; /* Adjust padding */
-    }    
-
-    .service-container {
-        flex-direction: column; /* Stack services vertically */
-        align-items: center; /* Center align */
-    }
-
-    .service-box {
-        width: 95%; /* Wider boxes for smaller screens */
-        margin-bottom: 15px; /* Less margin for compactness */
-    }
-
-    .form-container {
-        width: 95%; /* Wider form for easier input */
-    }
-
-    .warranty-box {
-        flex: 1 1 100%; /* Stack warranty boxes */
-        text-align: left; /* Left-align text */
-    }
-
-    .icon {
-        margin-right: 5px; /* Less margin on smaller screens */
-    }
-
-    .warranty-text {
-        text-align: left; /* Keep text left-aligned */
-    }
-}
 
