@@ -558,8 +558,9 @@ footer {
         margin-bottom: 15px; /* Less margin for compactness */
     }
 
-    .container {
-        width: 95%; /* Wider form for easier input */
+    .comparison-table {
+        width: 90%; /* Set the width of the table to a percentage for responsiveness */
+        margin: 0 auto;
     }
 
     .form-container {
@@ -581,3 +582,9 @@ footer {
     }
 }
 
+@media (max-aspect-ratio: 13/9) and (orientation: landscape) {
+
+    header {
+        height: 60vh; /* Larger height for landscape devices with wider screens */
+    }
+}
