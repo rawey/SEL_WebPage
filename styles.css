@@ -531,7 +531,7 @@ footer {
     header {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items */
-        min-height: 80vh;
+        min-height: 45vh;
         height: auto; /* Allow height to adjust */
     }
 
@@ -582,3 +582,34 @@ footer {
     }
 }
 
+@media (max-width: 768px) and (orientation: landscape) {
+
+    #logo-img {
+        max-width: 120px; /* Smaller logo size for landscape */
+    }
+
+    header {
+        flex-direction: column; /* Keep items stacked vertically */
+        align-items: center; /* Center items */
+        min-height: 50vh; /* Reduce height in landscape */
+        height: auto;
+        padding: 20px; /* Adjust padding */
+    }
+
+    header h1 {
+        font-size: 1.1rem; /* Smaller heading for landscape mode */
+    }
+
+    header p {
+        font-size: 0.8rem; /* Smaller paragraph */
+    }
+
+    #translate-btn {
+        font-size: 0.7rem; /* Smaller button */
+        padding: 5px 10px; /* Adjust padding */
+        position: relative;
+        top: 0; /* Reset positioning */
+        left: 0; /* Reset positioning */
+        margin-top: 10px; /* Space between button and text */
+    }
+}
