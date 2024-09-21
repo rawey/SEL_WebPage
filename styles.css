@@ -45,7 +45,7 @@ header h1, header p {
 }
 
 #logo-img {
-    width: 250px;
+    max-width: 250px;
     height: auto; /* Auto-resize to maintain aspect ratio */
 }
 
@@ -470,20 +470,22 @@ footer {
 @media (max-width: 768px) {
 
     #logo-img {
-        max-width: 125px;
+        max-width: 150px;
     }
 
     header {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items */
+        height: auto;
+        padding: 20px;
     }
 
     header h1 {
-        font-size: 1.5rem; /* Smaller heading */
+        font-size: 1rem; /* Smaller heading */
     }
 
     header p {
-        font-size: 0.9rem; /* Smaller paragraph */
+        font-size: 0.7rem; /* Smaller paragraph */
     }
 
     #translate-btn {
