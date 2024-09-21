@@ -45,16 +45,19 @@ header h1, header p {
 }
 
 #logo-img {
-    width: 250px;
+    width: 100px;
+    max-width: 250px;
     height: auto; /* Auto-resize to maintain aspect ratio */
 }
 
 .location-info {
-    position: absolute;
+    position: relative;
     bottom: 10px; /* Adjust this value to move the text higher or lower */
     right: 20px; /* Adjust this value to move the text more left or right */
     color: white;
     text-align: right;
+    right: 0; /* Reset positioning */
+    bottom: 0; /* Reset positioning */
     font-size: 1em;
     padding: 10px;
     border-radius: 8px; /* Optional: can remove for a simpler look */
@@ -78,6 +81,7 @@ header h1, header p {
 }
 
 button, #translate-btn {
+    position: relative;
     background-color: #fca218; /* Use one of your main colors */
     color: #fff; /* White text */
     padding: 10px 20px;
@@ -235,17 +239,18 @@ button:hover, #translate-btn:hover {
 
 .checkbox-container {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row; /* Ensure checkbox and text are in a row */
+    align-items: center;
     margin: -5px 0;
     font-size: 14px;
     line-height: 1.5;
     color: #333;
-    margin-left: -40px; /* Shift both checkbox and text to the left */
+    margin-left: 0; /* Shift both checkbox and text to the left */
 }
 
 .checkbox-container input[type="checkbox"] {
-    margin-right: -35px; /* Control space between checkbox and text */
-    margin-top: 13px;   /* Slightly raise checkbox to align with text */
+    margin-right: 10px; /* Control space between checkbox and text */
+    margin-top: 0;   /* Slightly raise checkbox to align with text */
 }
 
 .checkbox-label label {
