@@ -522,7 +522,7 @@ footer {
 }
 
 /* For devices with a max-width of 480px */
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait) {
 
     #logo-img {
         max-width: 150px; /* Further reduce logo size */
@@ -582,34 +582,33 @@ footer {
     }
 }
 
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-width: 820px) and (orientation: landscape) {
 
     #logo-img {
-        max-width: 120px; /* Smaller logo size for landscape */
+        max-width: 120px; /* Reduce the logo size further in landscape */
     }
 
     header {
-        flex-direction: column; /* Keep items stacked vertically */
-        align-items: center; /* Center items */
-        min-height: 50vh; /* Reduce height in landscape */
+        flex-direction: column;
+        align-items: center;
+        min-height: 60vh; /* Set height for landscape */
         height: auto;
-        padding: 20px; /* Adjust padding */
     }
 
     header h1 {
-        font-size: 1.1rem; /* Smaller heading for landscape mode */
+        font-size: 1.1rem; /* Smaller heading for landscape */
     }
 
     header p {
-        font-size: 0.8rem; /* Smaller paragraph */
+        font-size: 0.8rem;
     }
 
     #translate-btn {
-        font-size: 0.7rem; /* Smaller button */
-        padding: 5px 10px; /* Adjust padding */
-        position: relative;
-        top: 0; /* Reset positioning */
-        left: 0; /* Reset positioning */
-        margin-top: 10px; /* Space between button and text */
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    .comparison-table, .form-container, .warranty-box {
+        width: 90%;
     }
 }
