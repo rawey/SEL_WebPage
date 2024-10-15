@@ -25,7 +25,7 @@ const translations = {
         contactName: "Name:",
         contactEmail: "Email:",
         contactPhone: "Phone Number:",
-        contactMessage: "How Can We Help?",
+        // contactMessage: "How Can We Help?",
         submitBtn: "Submit",
         warrantyHeader: "Safeguard your solar investment",
         warrantyDescription: "With our 25-year SEL Protect Platinum plan, you produce clean, renewable solar energy and we take care of the rest!",
@@ -87,7 +87,7 @@ const translations = {
         contactName: "Nombre:",
         contactEmail: "Correo Electrónico:",
         contactPhone: "Número de Teléfono:",
-        contactMessage: "¿Cómo podemos ayudar?",
+        // contactMessage: "¿Cómo podemos ayudar?",
         submitBtn: "Enviar",
         warrantyHeader: "Proteja su inversión solar",
         warrantyDescription: "Con nuestro plan SEL Protect Platinum de 25 años, usted produce energía solar limpia y renovable ¡y nosotros nos encargamos del resto!",
@@ -159,7 +159,7 @@ function translateToSpanish() {
     document.querySelector('label[for="name"]').innerText = translations[currentLang].contactName;
     document.querySelector('label[for="email"]').innerText = translations[currentLang].contactEmail;
     document.querySelector('label[for="phone"]').innerText = translations[currentLang].contactPhone;
-    document.querySelector('label[for="message"]').innerText = translations[currentLang].contactMessage;
+    // document.querySelector('label[for="message"]').innerText = translations[currentLang].contactMessage;
     document.querySelector('button[type="submit"]').innerText = translations[currentLang].submitBtn;
 
     // Warranty section translations
