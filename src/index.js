@@ -8,7 +8,7 @@ document.getElementById('info-form').addEventListener('submit', function(event) 
 const translations = {
     en: {
         aboutUs: "About Us",
-        location: "Locations: Tampa, Orlando, and bordering towns.",
+        // location: "Locations: Tampa, Orlando, and bordering towns.",
         aboutText: "At SEL Florida, we've been dedicated to providing reliable solar energy solutions since 2017. Our mission is to empower homeowners and businesses to reduce their carbon footprint while lowering energy costs. We specialize in the design, installation, and maintenance of solar panel systems, offering cutting-edge technology and tailored solutions to meet the unique needs of our clients. With a commitment to sustainability and customer satisfaction, we strive to make clean, renewable energy accessible and affordable for all.",
         servicesTitle: "Our Services",
         service1: "Solar System Lease",
@@ -66,11 +66,11 @@ const translations = {
             ["Home Sale Impact", "Doesn't help your home sell any faster", "Your home sells 20% faster & you can transfer the system"],
             ["Tax Incentives", "No tax incentives", "Take advantage of Government Tax Incentives"]
         ],
-        consent: "I agree to receive recurring automated marketing text messages at the phone number provided. Consent is not a condition to purchase. Msg & data rates may apply. Msg frequency varies. Reply HELP for help and STOP to cancel."
+        // consent: "I agree to receive recurring automated marketing text messages at the phone number provided. Consent is not a condition to purchase. Msg & data rates may apply. Msg frequency varies. Reply HELP for help and STOP to cancel."
     },
     es: {
         aboutUs: "Sobre Nosotros",
-        location: "Ubicaciones: Tampa, Orlando y pueblos limítrofes.",
+        // location: "Ubicaciones: Tampa, Orlando y pueblos limítrofes.",
         aboutText: "En SEL Florida, nos hemos dedicado a proporcionar soluciones confiables de energía solar desde 2017. Nuestra misión es ayudar a los propietarios y empresas a reducir su huella de carbono mientras disminuyen los costos de energía. Nos especializamos en el diseño, la instalación y el mantenimiento de sistemas de paneles solares, ofreciendo tecnología de vanguardia y soluciones personalizadas para satisfacer las necesidades únicas de nuestros clientes. Con un compromiso con la sostenibilidad y la satisfacción del cliente, nos esforzamos por hacer que la energía limpia y renovable sea accesible y asequible para todos.",
         servicesTitle: "Nuestros Servicios",
         service1: "Arrendamiento de Sistemas Solares",
@@ -128,7 +128,7 @@ const translations = {
             ["Impacto en la venta de la casa", "No ayuda a que su casa se venda más rápido", "Su casa se vende un 20% más rápido y puede transferir el sistema"],
             ["Incentivos fiscales", "Sin incentivos fiscales", "Aproveche los incentivos fiscales del gobierno"]
         ],
-        consent: "Acepto recibir mensajes de texto automáticos recurrentes de marketing en el número de teléfono proporcionado. El consentimiento no es una condición para la compra. Pueden aplicarse tarifas de mensajes y datos. La frecuencia de los mensajes varía. Responde AYUDA para obtener ayuda y STOP para cancelar."
+        // consent: "Acepto recibir mensajes de texto automáticos recurrentes de marketing en el número de teléfono proporcionado. El consentimiento no es una condición para la compra. Pueden aplicarse tarifas de mensajes y datos. La frecuencia de los mensajes varía. Responde AYUDA para obtener ayuda y STOP para cancelar."
     }
 };
 
