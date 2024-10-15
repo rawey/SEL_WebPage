@@ -182,14 +182,13 @@ button:hover, #translate-btn:hover {
 }
 
 .contact-form select {
-    width: 100%; /* Make dropdown full width */
-    padding: 12px; /* Add padding to match input fields */
-    margin-bottom: 20px; /* Consistent margin at the bottom */
-    border: 1px solid #ccc; /* Same border style as input fields */
-    border-radius: 5px; /* Same border-radius as input fields */
-    
-    background-color: white; /* Set background color */
-    font-size: 1rem; /* Set font size */
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    background-color: white;
+    font-size: 1rem;
 }
 
 .contact-form input,
