@@ -7,6 +7,9 @@ document.getElementById('info-form').addEventListener('submit', function(event) 
 // Translation dictionary
 const translations = {
     en: {
+        header1: "Solar Solutions for a Brighter Future",
+        header2: "Leading provider of solar panel installations and energy-efficient solutions.",
+        header3: "Offering Solar Solutions Across All of Florida!",
         aboutUs: "About Us",
         // location: "Locations: Tampa, Orlando, and bordering towns.",
         aboutText: "At SEL Florida, we've been dedicated to providing reliable solar energy solutions since 2017. Our mission is to empower homeowners and businesses to reduce their carbon footprint while lowering energy costs. We specialize in the design, installation, and maintenance of solar panel systems, offering cutting-edge technology and tailored solutions to meet the unique needs of our clients. With a commitment to sustainability and customer satisfaction, we strive to make clean, renewable energy accessible and affordable for all.",
@@ -25,6 +28,17 @@ const translations = {
         contactName: "Name:",
         contactEmail: "Email:",
         contactPhone: "Phone Number:",
+        dropdownHeader: "How Can We Help?",
+        otherSpecification: "Please specify:",
+        otherPlaceholder: "Enter your message here...",
+        dropdown: {
+            selectOption: "Select an option",
+            consultation: "Consultation",
+            lease: "Solar System Lease",
+            buy: "Solar System Purchase",
+            batteries: "Batteries",
+            other: "Other"
+        },
         // contactMessage: "How Can We Help?",
         submitBtn: "Submit",
         warrantyHeader: "Safeguard your solar investment",
@@ -59,6 +73,7 @@ const translations = {
             "SEL insures your solar system to protect against theft or damage, at no additional cost"
         ],
         comparisonHeader: "Which Electricity Option Would You Pick?",
+        comparisonCompany: "Electric Company",
         comparisonRows: [
             ["Bill Increases with Inflation", "4% on average every year", "Bill never increases - fixed payment"],
             ["Financial Impact", "Each payment makes the utility company richer", "Each payment builds equity in your home"],
@@ -69,7 +84,10 @@ const translations = {
         // consent: "I agree to receive recurring automated marketing text messages at the phone number provided. Consent is not a condition to purchase. Msg & data rates may apply. Msg frequency varies. Reply HELP for help and STOP to cancel."
     },
     es: {
+        header1: "Soluciones Solares para un Futuro Brillante",
+        header2: "Proveedor líder de instalaciones de paneles solares y soluciones energéticamente eficientes.",
         aboutUs: "Sobre Nosotros",
+        header3: "¡Ofrecemos Soluciones Solares en Todo Florida!",
         // location: "Ubicaciones: Tampa, Orlando y pueblos limítrofes.",
         aboutText: "En SEL Florida, nos hemos dedicado a proporcionar soluciones confiables de energía solar desde 2017. Nuestra misión es ayudar a los propietarios y empresas a reducir su huella de carbono mientras disminuyen los costos de energía. Nos especializamos en el diseño, la instalación y el mantenimiento de sistemas de paneles solares, ofreciendo tecnología de vanguardia y soluciones personalizadas para satisfacer las necesidades únicas de nuestros clientes. Con un compromiso con la sostenibilidad y la satisfacción del cliente, nos esforzamos por hacer que la energía limpia y renovable sea accesible y asequible para todos.",
         servicesTitle: "Nuestros Servicios",
@@ -87,6 +105,17 @@ const translations = {
         contactName: "Nombre:",
         contactEmail: "Correo Electrónico:",
         contactPhone: "Número de Teléfono:",
+        dropdownHeader: "¿Cómo Te Podemos Ayudar?",
+        otherSpecification: "Especifique por favor:",
+        otherPlaceholder: "Ingrese su mensaje aquí...",
+        dropdown: {
+            selectOption: "Seleccione una opción",
+            consultation: "Consulta",
+            lease: "Arrendamiento de Sistema Solar",
+            buy: "Compra de Sistema Solar",
+            batteries: "Baterías",
+            other: "Otro"
+        },
         // contactMessage: "¿Cómo podemos ayudar?",
         submitBtn: "Enviar",
         warrantyHeader: "Proteja su inversión solar",
@@ -121,6 +150,7 @@ const translations = {
             "SEL asegura su sistema solar contra robo o daño, sin costo adicional"
         ],
         comparisonHeader: "¿Qué opción de electricidad elegirías?",
+        comparisonCompany: "Compañia de Electricidad",
         comparisonRows: [
             ["Aumento de la factura con la inflación", "4% en promedio cada año", "La factura nunca aumenta - pago fijo"],
             ["Impacto financiero", "Cada pago enriquece a la compañía de servicios", "Cada pago aumenta el valor de su hogar"],
@@ -140,6 +170,9 @@ function translateToSpanish() {
     currentLang = currentLang === 'en' ? 'es' : 'en'; // Toggle between English and Spanish
 
     // Existing translations...
+    document.querySelector('.header-box h1').innerText = translations[currentLang].header1;
+    document.querySelector('.header-box p').innerText = translations[currentLang].header2;
+    document.querySelector('.header-box h2').innerText = translations[currentLang].header3;
     document.querySelector('.about h2').innerText = translations[currentLang].aboutUs;
     document.querySelector('.about p').innerText = translations[currentLang].aboutText;
     // document.querySelector('.location-info p').innerText = translations[currentLang].location;
@@ -159,6 +192,18 @@ function translateToSpanish() {
     document.querySelector('label[for="name"]').innerText = translations[currentLang].contactName;
     document.querySelector('label[for="email"]').innerText = translations[currentLang].contactEmail;
     document.querySelector('label[for="phone"]').innerText = translations[currentLang].contactPhone;
+    document.querySelector('label[for="dropdown"]').innerText = translations[currentLang].dropdownHeader;
+    document.querySelector('label[for="other-text"]').innerText = translations[currentLang].otherSpecification;
+    document.getElementById('other-text').placeholder = translations[currentLang].otherPlaceholder;
+
+    const dropdown = document.getElementById('dropdown');
+    dropdown.options[0].text = translations[currentLang].dropdown.selectOption;
+    dropdown.options[1].text = translations[currentLang].dropdown.consultation;
+    dropdown.options[2].text = translations[currentLang].dropdown.lease;
+    dropdown.options[3].text = translations[currentLang].dropdown.buy;
+    dropdown.options[4].text = translations[currentLang].dropdown.batteries;
+    dropdown.options[5].text = translations[currentLang].dropdown.other;
+
     // document.querySelector('label[for="message"]').innerText = translations[currentLang].contactMessage;
     document.querySelector('button[type="submit"]').innerText = translations[currentLang].submitBtn;
 
@@ -191,7 +236,8 @@ function translateToSpanish() {
     document.querySelector('.warranty-box:nth-child(6) ul li').innerText = translations[currentLang].sunnovaInsuredDetails[0];
 
     // Comparison section translations
-    document.querySelector('.comparison h2').innerText = translations[currentLang].comparisonHeader;    
+    document.querySelector('.comparison h2').innerText = translations[currentLang].comparisonHeader;
+    document.getElementById('tableHeaderCompany').innerText = translations[currentLang].comparisonCompany;    
     const comparisonRows = document.querySelectorAll('.comparison table tr');
     translations[currentLang].comparisonRows.forEach((row, index) => {
         comparisonRows[index + 1].children[0].innerText = row[0];
@@ -236,3 +282,5 @@ const dropdown = document.getElementById('dropdown');
             otherInputContainer.style.display = 'none';
         }
     });
+
+

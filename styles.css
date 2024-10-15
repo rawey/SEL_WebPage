@@ -44,6 +44,15 @@ header h1, header p {
     margin: 10px 0; /* Add some margin for spacing */
 }
 
+header h2 {
+    margin-top: 20px; /* Add space above to separate it from the paragraph */
+    font-size: 1.8rem; /* Adjust font size as needed */
+    animation: pulse 2s ease-in-out infinite; /* Apply continuous pulsing animation */
+    color: #ffffff; /* Make it one of your main colors to stand out */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow to enhance readability */
+}
+
 #logo-img {
     max-width: 250px;
     height: auto; /* Auto-resize to maintain aspect ratio */
@@ -267,7 +276,7 @@ footer {
 }
 
 .logo img {
-    width: 150px; 
+    width: 200px; 
 }
 
 .warranty {
@@ -310,13 +319,13 @@ footer {
 
 .warranty-header-box h2 {
     color: #fca218; /* Matching the color scheme */
-    font-size: 46px; /* Slightly larger font for the header */
+    font-size: 50px; /* Slightly larger font for the header */
     margin: 0 0 10px 0; /* Margin at the bottom */
 }
 
 .warranty-header-box p {
     color: #000000; /* Text color */
-    font-size: 17.5px; /* Font size for the paragraph */
+    font-size: 19px; /* Font size for the paragraph */
     margin: 0; /* Remove default margin */
     line-height: 1.5; /* Line height for readability */
     font-weight: bold;
@@ -450,6 +459,14 @@ footer {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger */
+    }
+}
 
 @keyframes fadeIn {
     from {
