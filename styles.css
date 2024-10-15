@@ -181,6 +181,17 @@ button:hover, #translate-btn:hover {
     margin: 10px 0 5px;
 }
 
+.contact-form select {
+    width: 100%; /* Make dropdown full width */
+    padding: 12px; /* Add padding to match input fields */
+    margin-bottom: 20px; /* Consistent margin at the bottom */
+    border: 1px solid #ccc; /* Same border style as input fields */
+    border-radius: 5px; /* Same border-radius as input fields */
+    
+    background-color: white; /* Set background color */
+    font-size: 1rem; /* Set font size */
+}
+
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -235,8 +246,29 @@ footer {
     width: 100%;
 }
 
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-container a {
+    margin-right: -10px;
+}
+
+.social-icon {
+    width: 48px; 
+}
+
+.social-icon2 {
+    width: 80px; 
+}
+
 .logo img {
-    width: 300px; /* Increase icon size */
+    width: 150px; 
 }
 
 .warranty {
@@ -279,13 +311,13 @@ footer {
 
 .warranty-header-box h2 {
     color: #fca218; /* Matching the color scheme */
-    font-size: 36px; /* Slightly larger font for the header */
+    font-size: 46px; /* Slightly larger font for the header */
     margin: 0 0 10px 0; /* Margin at the bottom */
 }
 
 .warranty-header-box p {
     color: #000000; /* Text color */
-    font-size: 18px; /* Font size for the paragraph */
+    font-size: 17.5px; /* Font size for the paragraph */
     margin: 0; /* Remove default margin */
     line-height: 1.5; /* Line height for readability */
     font-weight: bold;
@@ -299,7 +331,7 @@ footer {
 }
 
 .warranty-box {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent box for readability */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent box for readability */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -418,6 +450,7 @@ footer {
 .comparison-table td {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
 
 @keyframes fadeIn {
     from {

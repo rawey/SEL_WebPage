@@ -11,20 +11,24 @@ const translations = {
         location: "Locations: Tampa, Orlando, and bordering towns.",
         aboutText: "At SEL Florida, we've been dedicated to providing reliable solar energy solutions since 2017. Our mission is to empower homeowners and businesses to reduce their carbon footprint while lowering energy costs. We specialize in the design, installation, and maintenance of solar panel systems, offering cutting-edge technology and tailored solutions to meet the unique needs of our clients. With a commitment to sustainability and customer satisfaction, we strive to make clean, renewable energy accessible and affordable for all.",
         servicesTitle: "Our Services",
-        service1: "Solar Panel Installation",
-        service1_text: "We provide professional installation services to help you harness the power of solar energy.",
-        service2: "Energy Storage Solutions",
-        service2_text: "Store energy for later use and maximize the benefits of your solar power system.",
-        service3: "Free Consultation",
-        service3_text: "Get expert advice on how solar energy can reduce your bills and carbon footprint.",
+        service1: "Solar System Lease",
+        service1_text: "Lease solar systems with affordable monthly payments and start saving on energy costs today. No down payment required, and it doesn’t impact your credit score.",
+        service2: "Solar System Sale",
+        service2_text: "Purchase your own solar system and enjoy long-term savings on your electricity bills. No down payment required, with up to 30 years warranty.",
+        service3: "Solar System with Batteries",
+        service3_text: "Get a complete solar solution with energy storage to maximize your savings.",
+        service4: "Batteries",
+        service4_text: "Do you have solar panels and wish to add batteries, or just want to buy batteries? We've got you covered.",
+        service5: "Free Consultation",
+        service5_text: "Get expert advice on how solar energy can reduce your bills and carbon footprint.",
         contactTitle: "Contact Us for More Information",
         contactName: "Name:",
         contactEmail: "Email:",
         contactPhone: "Phone Number:",
         contactMessage: "How Can We Help?",
         submitBtn: "Submit",
-        warrantyHeader: "Safeguard your solar investment.",
-        warrantyDescription: "With our 25-year Sunnova Protect Platinum plan, you produce clean, renewable solar energy and we take care of the rest!",
+        warrantyHeader: "Safeguard your solar investment",
+        warrantyDescription: "With our 25-year SEL Protect Platinum plan, you produce clean, renewable solar energy and we take care of the rest!",
         systemMonitoring: "System Monitoring",
         systemMonitoringDetails: [
             "Proactive service alerts and performance monitoring",
@@ -50,9 +54,9 @@ const translations = {
         extensiveCoverageDetails: [
             "Zero out-of-pocket costs for repairs and labor, even beyond the manufacturer's warranty"
         ],
-        sunnovaInsured: "Sunnova Insured",
+        sunnovaInsured: "SEL Insured",
         sunnovaInsuredDetails: [
-            "Sunnova insures your solar system to protect against theft or damage, at no additional cost"
+            "SEL insures your solar system to protect against theft or damage, at no additional cost"
         ],
         comparisonHeader: "Which Electricity Option Would You Pick?",
         comparisonRows: [
@@ -69,20 +73,24 @@ const translations = {
         location: "Ubicaciones: Tampa, Orlando y pueblos limítrofes.",
         aboutText: "En SEL Florida, nos hemos dedicado a proporcionar soluciones confiables de energía solar desde 2017. Nuestra misión es ayudar a los propietarios y empresas a reducir su huella de carbono mientras disminuyen los costos de energía. Nos especializamos en el diseño, la instalación y el mantenimiento de sistemas de paneles solares, ofreciendo tecnología de vanguardia y soluciones personalizadas para satisfacer las necesidades únicas de nuestros clientes. Con un compromiso con la sostenibilidad y la satisfacción del cliente, nos esforzamos por hacer que la energía limpia y renovable sea accesible y asequible para todos.",
         servicesTitle: "Nuestros Servicios",
-        service1: "Instalación de Paneles Solares",
-        service1_text: "Ofrecemos servicios de instalación profesional para ayudarle a aprovechar la energía solar.",
-        service2: "Soluciones de Almacenamiento de Energía",
-        service2_text: "Almacene energía para su uso posterior y maximice los beneficios de su sistema de energía solar.",
-        service3: "Consulta Gratuita",
-        service3_text: "Obtenga asesoramiento experto sobre cómo la energía solar puede reducir sus facturas y su huella de carbono.",
+        service1: "Arrendamiento de Sistemas Solares",
+        service1_text: "Arriende sistemas solares con pagos mensuales asequibles y comience a ahorrar en costos de energía hoy. No se requiere pago inicial, y no afecta su crédito.",
+        service2: "Venta de Sistemas Solares",
+        service2_text: "Compre su propio sistema solar y disfrute de ahorros a largo plazo en sus facturas de electricidad. No se requiere pago inicial, con garantía de hasta 30 años.",
+        service3: "Sistema Solar con Baterías",
+        service3_text: "Obtenga una solución solar completa con almacenamiento de energía para maximizar sus ahorros.",
+        service4: "Baterías",
+        service4_text: "¿Tiene paneles solares y desea agregar baterías, o simplemente desea comprar baterías? Tenemos lo que necesita.",
+        service5: "Consulta Gratuita",
+        service5_text: "Obtenga asesoramiento experto sobre cómo la energía solar puede reducir sus facturas y su huella de carbono.",
         contactTitle: "Contáctenos para más información",
         contactName: "Nombre:",
         contactEmail: "Correo Electrónico:",
         contactPhone: "Número de Teléfono:",
         contactMessage: "¿Cómo podemos ayudar?",
         submitBtn: "Enviar",
-        warrantyHeader: "Proteja su inversión solar.",
-        warrantyDescription: "Con nuestro plan Sunnova Protect Platinum de 25 años, usted produce energía solar limpia y renovable ¡y nosotros nos encargamos del resto!",
+        warrantyHeader: "Proteja su inversión solar",
+        warrantyDescription: "Con nuestro plan SEL Protect Platinum de 25 años, usted produce energía solar limpia y renovable ¡y nosotros nos encargamos del resto!",
         systemMonitoring: "Monitoreo del Sistema",
         systemMonitoringDetails: [
             "Alertas de servicio proactivo y monitoreo del rendimiento",
@@ -108,9 +116,9 @@ const translations = {
         extensiveCoverageDetails: [
             "Cero costos de bolsillo para reparaciones y mano de obra, incluso más allá de la garantía del fabricante"
         ],
-        sunnovaInsured: "Asegurado por Sunnova",
+        sunnovaInsured: "Asegurado por SEL",
         sunnovaInsuredDetails: [
-            "Sunnova asegura su sistema solar contra robo o daño, sin costo adicional"
+            "SEL asegura su sistema solar contra robo o daño, sin costo adicional"
         ],
         comparisonHeader: "¿Qué opción de electricidad elegirías?",
         comparisonRows: [
@@ -124,6 +132,7 @@ const translations = {
     }
 };
 
+
 let currentLang = 'en'; // Default language
 
 // Function to toggle language
@@ -133,7 +142,7 @@ function translateToSpanish() {
     // Existing translations...
     document.querySelector('.about h2').innerText = translations[currentLang].aboutUs;
     document.querySelector('.about p').innerText = translations[currentLang].aboutText;
-    document.querySelector('.location-info p').innerText = translations[currentLang].location;
+    // document.querySelector('.location-info p').innerText = translations[currentLang].location;
     document.querySelector('.services h2').innerText = translations[currentLang].servicesTitle;
     document.querySelectorAll('.service-box h3')[0].innerText = translations[currentLang].service1;
     document.querySelectorAll('.service-box p')[0].innerText = translations[currentLang].service1_text;
@@ -141,8 +150,12 @@ function translateToSpanish() {
     document.querySelectorAll('.service-box p')[1].innerText = translations[currentLang].service2_text;
     document.querySelectorAll('.service-box h3')[2].innerText = translations[currentLang].service3;
     document.querySelectorAll('.service-box p')[2].innerText = translations[currentLang].service3_text;
+    document.querySelectorAll('.service-box h3')[3].innerText = translations[currentLang].service4;
+    document.querySelectorAll('.service-box p')[3].innerText = translations[currentLang].service4_text;
+    document.querySelectorAll('.service-box h3')[4].innerText = translations[currentLang].service5;
+    document.querySelectorAll('.service-box p')[4].innerText = translations[currentLang].service5_text;
     document.querySelector('.contact-form h2').innerText = translations[currentLang].contactTitle;
-    document.querySelector('label[for="marketing-consent"]').innerText = translations[currentLang].consent;
+    // document.querySelector('label[for="marketing-consent"]').innerText = translations[currentLang].consent;
     document.querySelector('label[for="name"]').innerText = translations[currentLang].contactName;
     document.querySelector('label[for="email"]').innerText = translations[currentLang].contactEmail;
     document.querySelector('label[for="phone"]').innerText = translations[currentLang].contactPhone;
@@ -213,12 +226,13 @@ document.getElementById('info-form').addEventListener('submit', function(event) 
 });
 
 
+const dropdown = document.getElementById('dropdown');
+    const otherInputContainer = document.getElementById('other-input-container');
 
-// function showDetails(service) {
-//     const details = document.getElementById(service + '-details');
-//     if (details.style.display === 'block') {
-//         details.style.display = 'none';
-//     } else {
-//         details.style.display = 'block';
-//     }
-// }
+    dropdown.addEventListener('change', function () {
+        if (this.value === 'other') {
+            otherInputContainer.style.display = 'block';
+        } else {
+            otherInputContainer.style.display = 'none';
+        }
+    });

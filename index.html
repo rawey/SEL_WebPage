@@ -4,231 +4,243 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Business Name - Solar Panels</title>
+    <meta name="description" content="Leading provider of solar panel installations, energy storage solutions, and consultations for a sustainable future.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="header-box"> <!-- New box around the text -->
-            
-            <img src="assets/SEL_logo.png" alt="Your Business Logo" id="logo-img">
-            
+        <div class="header-box">
+            <img src="assets/SEL_logo.png" alt="SEL_Logo" id="logo-img">
             <h1>Solar Solutions for a Brighter Future</h1>
             <p>Leading provider of solar panel installations and energy-efficient solutions.</p>
-            <button id="translate-btn">Traducir al Español</button>
-
-                <!-- <div class="location-info">
-                    <p>Locations: 
-                        <span class="location">Tampa</span>, 
-                        <span class="location">Orlando</span>, 
-                        and 
-                        <span class="location">bordering towns.</span>
-                    </p>
-                </div> -->
-
+            <button id="translate-btn" aria-label="Translate to Spanish">Traducir al Español</button>
         </div>
     </header>
 
-    <section class="about">
-        <div class="container">
-            <h2>About Us</h2> <!-- Make sure this is exactly what the script expects -->
-            <p>At SEL Florida, we've been dedicated to providing reliable solar energy solutions since 2017. 
-                Our mission is to empower homeowners and businesses to reduce their carbon footprint while lowering energy costs. 
-                We specialize in the design, installation, and maintenance of solar panel systems, offering cutting-edge technology and tailored solutions to meet the unique needs of our clients. 
-                With a commitment to sustainability and customer satisfaction, we strive to make clean, renewable energy accessible and affordable for all.</p>
-        </div>
-    </section>  
-    
-    <section class="services">
-        <h2>Our Services</h2> <!-- Again, match exactly with the querySelector -->
-        <div class="service-container">
-            <div class="service-box">
-                <img src="assets/solar-panels-944000_1920.jpg" alt="Solar Installation">
-                <h3>Solar Panel Installation</h3>
-                <p>We provide professional installation services to help you harness the power of solar energy.</p>
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>At SEL Florida, we've been dedicated to providing reliable solar energy solutions since 2017. 
+                    Our mission is to empower homeowners and businesses to reduce their carbon footprint while lowering energy costs. 
+                    We specialize in the design, installation, and maintenance of solar panel systems, offering cutting-edge technology and tailored solutions to meet the unique needs of our clients. 
+                    With a commitment to sustainability and customer satisfaction, we strive to make clean, renewable energy accessible and affordable for all.</p>
             </div>
-            <div class="service-box">
-                <img src="assets/solar_storage.png" alt="Energy Storage">
-                <h3>Energy Storage Solutions</h3>
-                <p>Store energy for later use and maximize the benefits of your solar power system.</p>
-            </div>
-            <div class="service-box">
-                <img src="assets/solar_consult.png" alt="Consultation">
-                <h3>Free Consultation</h3>
-                <p>Get expert advice on how solar energy can reduce your bills and carbon footprint.</p>
-            </div>
-        </div>
-    </section>
+        </section>  
 
-    <section class="warranty">
-        <div class="warranty-background">
-            <!-- This div will cover the entire section with the background image -->
-        </div>
-        <div class="warranty-content">
-            <div class="warranty-header-box">
-                <div class="logo">
-                    <img src="assets/25-year-solar-battery-protection.png" alt="Sunnova Logo Icon">
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-container">
+                <div class="service-box">
+                    <img src="assets/solar-panels-lease.png" alt="Solar System Lease">
+                    <h3>Solar System Lease</h3>
+                    <p>Lease solar systems with affordable monthly payments and start saving on energy costs today. 
+                        No down payment required, and it doesn’t impact your credit score.</p>                    
                 </div>
-                <h2>Safeguard your solar investment.</h2>
-                <p>With our 25-year Sunnova Protect Platinum plan, you produce clean, renewable solar energy and we take care of the rest!</p>
-            </div>
-            <div class="warranty-container">
-                <div class="warranty-box">
-                    <div class="icon">
-                        <img src="assets/24-7.png" alt="System Monitoring Icon">
-                    </div>
-                    <div class="warranty-text">
-                        <h4>System Monitoring</h4>
-                        <ul>
-                            <li>Proactive service alerts and performance monitoring</li>
-                            <li>Access to production data</li>
-                            <li>Easy account management</li>
-                        </ul>
-                    </div>
+                <div class="service-box">
+                    <img src="assets/solar-panel-sale.jpg" alt="Solar System Sale">
+                    <h3>Solar System Sale</h3>
+                    <p>Purchase your own solar system and enjoy long-term savings on your electricity bills. 
+                        No down payment required, with up to 30 years warranty.</p>
                 </div>
-        
-                <div class="warranty-box">
-                    <div class="icon">
-                        <img src="assets/System_Diagnostic.png" alt="System Diagnosis Icon">
-                    </div>
-                    <div class="warranty-text">
-                        <h4>System Diagnosis</h4>
-                        <ul>
-                            <li>Hassle-free, remote assessments</li>
-                            <li>Total management of your system's performance</li>
-                            <li>Production simulation to determine expected system performance</li>
-                        </ul>
-                    </div>
+                <div class="service-box">
+                    <img src="assets/Solar_Batery.avif" alt="Solar System with Batteries">
+                    <h3>Solar System with Batteries</h3>
+                    <p>Get a complete solar solution with energy storage to maximize your savings.</p>
                 </div>
-        
-                <div class="warranty-box">
-                    <div class="icon">
-                        <img src="assets/Maintenance.png" alt="Corrective Maintenance Icon">
-                    </div>
-                    <div class="warranty-text">
-                        <h4>Corrective Maintenance & Warranty</h4>
-                        <ul>
-                            <li>Repairs, replacements, and labor for system components covered under warranty</li>
-                        </ul>
-                    </div>
+                <div class="service-box">
+                    <img src="assets/powerwall_battery.png" alt="Batteries">
+                    <h3>Batteries</h3>
+                    <p>Do you have solar panels and wish to add batteries, or just want to buy batteries? We've got you covered.</p>
                 </div>
-        
-                <div class="warranty-box">
-                    <div class="icon">
-                        <img src="assets/Replacement.png" alt="Hassle-Free Management Icon">
-                    </div>
-                    <div class="warranty-text">
-                        <h4>Hassle-Free Management of Repairs & Replacements</h4>
-                        <ul>
-                            <li>Complete management of repairs and replacements for parts under warranty</li>
-                            <li>Coordination with manufacturers to replace system components</li>
-                        </ul>
-                    </div>
-                </div>
-        
-                <div class="warranty-box">
-                    <div class="icon">
-                        <img src="assets/System_Coverage.png" alt="Extensive Coverage Icon">
-                    </div>
-                    <div class="warranty-text">
-                        <h4>Extensive System Coverage</h4>
-                        <ul>
-                            <li>Zero out-of-pocket costs for repairs and labor, even beyond the manufacturer's warranty</li>
-                        </ul>
-                    </div>
-                </div>
-        
-                <div class="warranty-box">
-                    <div class="icon">
-                        <img src="assets/Sunnova_Insured.png" alt="Sunnova Insured Icon">
-                    </div>
-                    <div class="warranty-text">
-                        <h4>Sunnova Insured</h4>
-                        <ul>
-                            <li>Sunnova insures your solar system to protect against theft or damage, at no additional cost</li>
-                        </ul>
-                    </div>
+                <div class="service-box">
+                    <img src="assets/solar_consult.png" alt="Free Consultation">
+                    <h3>Free Consultation</h3>
+                    <p>Get expert advice on how solar energy can reduce your bills and carbon footprint.</p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- <section class="technology">
-        <div class="container">
-            <h2>Advanced Solar Panel Technology</h2>
-            <p>Our panels feature the latest photovoltaic technology, which allows for higher energy conversion efficiency and durability under various weather conditions.</p>
-        </div>
-    </section> -->
-    
-    <section class="comparison">
-        <div class="container">
-            <h2>Which Electricity Option Would You Pick?</h2>
-            <table class="comparison-table">
-                <tr>
-                    <th></th>
-                    <th>TECO</th>
-                    <th>SEL Florida</th>
-                </tr>
-                <tr>
-                    <td>Bill Increases with Inflation</td>
-                    <td>4% on average every year</td>
-                    <td>Bill never increases - fixed payment</td>
-                </tr>
-                <tr>
-                    <td>Financial Impact</td>
-                    <td>Each payment makes the utility company richer</td>
-                    <td>Each payment builds equity in your home</td>
-                </tr>
-                <tr>
-                    <td>Home Value</td>
-                    <td>Your home value stays the same</td>
-                    <td>Your home value increases from the additional value of the system</td>
-                </tr>
-                <tr>
-                    <td>Home Sale Impact</td>
-                    <td>Doesn't help your home sell any faster</td>
-                    <td>Your home sells 20% faster & you can transfer the system</td>
-                </tr>
-                <tr>
-                    <td>Tax Incentives</td>
-                    <td>No tax incentives</td>
-                    <td>Take advantage of Government Tax Incentives</td>
-                </tr>
-            </table>
-        </div>
-    </section>
-       
-    
-    <section class="contact-form">
-        <div class="form-container">
-            <h2>Contact Us for More Information</h2>
-            <form id="info-form" action="" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-    
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-    
-                <label for="message">How Can We Help?</label>
-                <textarea id="message" name="message" required></textarea>
-    
-                <!-- <div class="checkbox-container">
-                    <input type="checkbox" id="marketing-consent" name="marketing-consent" required>
-                    <label for="marketing-consent" class="checkbox-label">
-                        I agree to receive recurring automated marketing text messages at the phone number provided. Consent is not a condition to purchase. Msg & data rates may apply. Msg frequency varies. Reply HELP for help and STOP to cancel.
-                    </label>
-                </div> -->
-    
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </section>
-        
+        </section>
+
+        <section class="warranty">
+            <div class="warranty-background">
+                <!-- This div will cover the entire section with the background image -->
+            </div>
+            <div class="warranty-content">
+                <div class="warranty-header-box">
+                    <!-- <div class="logo">
+                        <img src="assets/SEL_Shield.png" alt="SEL Logo Icon">
+                    </div> -->
+                    <h2>Safeguard your solar investment</h2>
+                    <p>With our 25-year SEL Protect Platinum plan, you produce clean, renewable solar energy and we take care of the rest!</p>
+                </div>
+                <div class="warranty-container">
+                    <div class="warranty-box">
+                        <div class="icon">
+                            <img src="assets/24-7.png" alt="System Monitoring Icon">
+                        </div>
+                        <div class="warranty-text">
+                            <h4>System Monitoring</h4>
+                            <ul>
+                                <li>Proactive service alerts and performance monitoring</li>
+                                <li>Access to production data</li>
+                                <li>Easy account management</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <div class="warranty-box">
+                        <div class="icon">
+                            <img src="assets/System_Diagnostic.png" alt="System Diagnosis Icon">
+                        </div>
+                        <div class="warranty-text">
+                            <h4>System Diagnosis</h4>
+                            <ul>
+                                <li>Hassle-free, remote assessments</li>
+                                <li>Total management of your system's performance</li>
+                                <li>Production simulation to determine expected system performance</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <div class="warranty-box">
+                        <div class="icon">
+                            <img src="assets/Maintenance.png" alt="Corrective Maintenance Icon">
+                        </div>
+                        <div class="warranty-text">
+                            <h4>Corrective Maintenance & Warranty</h4>
+                            <ul>
+                                <li>Repairs, replacements, and labor for system components covered under warranty</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <div class="warranty-box">
+                        <div class="icon">
+                            <img src="assets/Replacement.png" alt="Hassle-Free Management Icon">
+                        </div>
+                        <div class="warranty-text">
+                            <h4>Hassle-Free Management of Repairs & Replacements</h4>
+                            <ul>
+                                <li>Complete management of repairs and replacements for parts under warranty</li>
+                                <li>Coordination with manufacturers to replace system components</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <div class="warranty-box">
+                        <div class="icon">
+                            <img src="assets/System_Coverage.png" alt="Extensive Coverage Icon">
+                        </div>
+                        <div class="warranty-text">
+                            <h4>Extensive System Coverage</h4>
+                            <ul>
+                                <li>Zero out-of-pocket costs for repairs and labor, even beyond the manufacturer's warranty</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <div class="warranty-box">
+                        <div class="icon">
+                            <img src="assets/Sunnova_Insured.png" alt="Sunnova Insured Icon">
+                        </div>
+                        <div class="warranty-text">
+                            <h4>SEL Insured</h4>
+                            <ul>
+                                <li>SEL insures your solar system to protect against theft or damage, at no additional cost</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparison">
+            <div class="container">
+                <h2>Which Electricity Option Would You Pick?</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Electric Company</th>
+                            <th>SEL Florida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bill Increases with Inflation</td>
+                            <td>4% on average every year</td>
+                            <td>Bill never increases - fixed payment</td>
+                        </tr>
+                        <tr>
+                            <td>Financial Impact</td>
+                            <td>Each payment makes the utility company richer</td>
+                            <td>Each payment builds equity in your home</td>
+                        </tr>
+                        <tr>
+                            <td>Home Value</td>
+                            <td>Your home value stays the same</td>
+                            <td>Your home value increases from the additional value of the system</td>
+                        </tr>
+                        <tr>
+                            <td>Home Sale Impact</td>
+                            <td>Doesn't help your home sell any faster</td>
+                            <td>Your home sells 20% faster & you can transfer the system</td>
+                        </tr>
+                        <tr>
+                            <td>Tax Incentives</td>
+                            <td>No tax incentives</td>
+                            <td>Take advantage of Government Tax Incentives</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <div class="form-container">
+                <h2>Contact Us for More Information</h2>
+                <form id="info-form" action="" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+
+                    <label for="dropdown">How Can We Help?</label>
+                    <select id="dropdown" name="dropdown" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="consultation">Consultation</option>
+                        <option value="lease">Lease Solar System</option>
+                        <option value="buy">Buy Solar System</option>
+                        <option value="batteries">Batteries</option>
+                        <option value="other">Other</option>
+                    </select>
+
+            <!-- This input field will be hidden by default and shown only if "Other" is selected -->
+            <div id="other-input-container" style="display: none;">
+                <label for="other-text">Please specify:</label>
+                <input type="text" id="other-text" name="other-text" placeholder="Enter your message here...">
+            </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; SEL Florida. All rights reserved.</p>
+        <div class="footer-container">
+            <a href="https://www.facebook.com/SELflorida" target="_blank">
+                <img src="assets/facebook-logo.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/sel.florida/" target="_blank">
+                <img src="assets/instagram-logo.png" alt="Instagram" class="social-icon2">
+            </a>
+            <p>SEL Florida. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="src/index.js"></script>
