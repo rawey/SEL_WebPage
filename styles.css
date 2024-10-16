@@ -512,6 +512,27 @@ footer {
     animation-delay: 0.4s; /* Delay for the paragraph */
 }
 
+.thank-you-container button {
+    background-color: #0a9d58;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.thank-you-container button:hover {
+    background-color: #088e50;
+}
+
+.thank-you-container img {
+    width: 100%;
+    height: 125px;
+    object-fit: cover; /* Ensures image fits the box but retains its aspect ratio */
+    border-radius: 10px;
+}
 
 /* Mobile Responsiveness */
 /* Mobile responsiveness */
@@ -525,7 +546,7 @@ footer {
     header {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items */
-        min-height: 40vh;
+        min-height: 60vh;
         height: auto; /* Allow height to adjust */
     }
 
@@ -580,7 +601,7 @@ footer {
     header {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items */
-        min-height: 45vh;
+        min-height: 65vh;
         height: auto; /* Allow height to adjust */
     }
 
@@ -640,7 +661,7 @@ footer {
     header {
         flex-direction: column;
         align-items: center;
-        min-height: 60vh; /* Set height for landscape */
+        min-height: 80vh; /* Set height for landscape */
         height: auto;
     }
 

@@ -1,8 +1,8 @@
-document.getElementById('info-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Form submitted! We will get back to you soon.');
-    // Add your form submission logic here (e.g., Netlify form integration).
-});
+// document.getElementById('info-form').addEventListener('submit', function(event) {
+//     event.preventDefault();
+//     alert('Form submitted! We will get back to you soon.');
+//     // Add your form submission logic here (e.g., Netlify form integration).
+// });
 
 // Translation dictionary
 const translations = {
@@ -247,6 +247,7 @@ function translateToSpanish() {
 
     // Update button text to toggle back
     document.getElementById('translate-btn').innerText = currentLang === 'en' ? 'Traducir al Español' : 'Translate to English';
+    console.log(currentLang)
 }
 
 
@@ -271,6 +272,24 @@ document.getElementById('info-form').addEventListener('submit', function(event) 
     this.reset();
 });
 
+document.getElementById('phone').addEventListener('input', function (e) {
+    let input = e.target.value.replace(/\D/g, ''); // Remove all non-digit characters
+    let formattedNumber = '';
+
+    // Format the input into the pattern 123-456-7890
+    if (input.length > 0) {
+        formattedNumber = input.substring(0, 3);
+    }
+    if (input.length >= 4) {
+        formattedNumber += '-' + input.substring(3, 6);
+    }
+    if (input.length >= 7) {
+        formattedNumber += '-' + input.substring(6, 10);
+    }
+
+    e.target.value = formattedNumber; // Set the formatted number back to the input field
+});
+
 
 const dropdown = document.getElementById('dropdown');
     const otherInputContainer = document.getElementById('other-input-container');
@@ -283,4 +302,16 @@ const dropdown = document.getElementById('dropdown');
         }
     });
 
-
+    function redirectToThankYouPage(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+    
+        if (currentLang === 'es') {
+            window.location.href = "gracias.html"; // Redirect to Spanish thank-you page
+        } else {
+            window.location.href = "thank-you.html"; // Redirect to English thank-you page
+        }
+    }
+    
+    function returnToMainPage() {
+        window.location.href = "index.html"; // Change to the correct path of your main page
+    }

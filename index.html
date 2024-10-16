@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Business Name - Solar Panels</title>
+    <title>SEL Florida</title>
     <meta name="description" content="Leading provider of solar panel installations, energy storage solutions, and consultations for a sustainable future.">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -200,7 +200,7 @@
         <section class="contact-form">
             <div class="form-container">
                 <h2>Contact Us for More Information</h2>
-                <form id="info-form" action="" method="POST">
+                <form id="info-form" onsubmit="redirectToThankYouPage(event)">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
 
@@ -214,17 +214,17 @@
                     <select id="dropdown" name="dropdown" required>
                         <option value="" disabled selected>Select an option</option>
                         <option value="consultation">Consultation</option>
-                        <option value="lease">Lease Solar System</option>
-                        <option value="buy">Buy Solar System</option>
+                        <option value="lease">Solar System Lease</option>
+                        <option value="buy">Solar System Purchase</option>
                         <option value="batteries">Batteries</option>
                         <option value="other">Other</option>
                     </select>
 
             <!-- This input field will be hidden by default and shown only if "Other" is selected -->
-            <div id="other-input-container" style="display: none;">
-                <label for="other-text">Please specify:</label>
-                <input type="text" id="other-text" name="other-text" placeholder="Enter your message here...">
-            </div>
+                    <div id="other-input-container" style="display: none;">
+                        <label for="other-text">Please specify:</label>
+                        <input type="text" id="other-text" name="other-text" placeholder="Enter your message here...">
+                    </div>
 
                     <button type="submit">Submit</button>
                 </form>
