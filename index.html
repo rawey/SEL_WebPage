@@ -35,31 +35,41 @@
             <h2>Our Services</h2>
             <div class="service-container">
                 <div class="service-box">
-                    <img src="assets/solar-panels-lease.png" alt="Solar System Lease">
-                    <h3>Solar System Lease</h3>
-                    <p>Lease solar systems with affordable monthly payments and start saving on energy costs today. 
-                        No down payment required, and it doesn’t impact your credit score.</p>                    
+                    <a href="#contact-form">
+                        <img src="assets/solar-panels-lease.png" alt="Solar System Lease">
+                        <h3>Solar System Lease</h3>
+                        <p>Lease solar systems with affordable monthly payments and start saving on energy costs today. 
+                            No down payment required, and it doesn’t impact your credit score.</p>
+                    </a>
                 </div>
                 <div class="service-box">
-                    <img src="assets/solar-panel-sale.jpg" alt="Solar System Sale">
-                    <h3>Solar System Purchase</h3>
-                    <p>Purchase your own solar system and enjoy long-term savings on your electricity bills. 
+                    <a href="#contact-form">
+                        <img src="assets/solar-panel-sale.jpg" alt="Solar System Sale">
+                        <h3>Solar System Purchase</h3>
+                        <p>Purchase your own solar system and enjoy long-term savings on your electricity bills. 
                         No down payment required, with up to 30 years warranty.</p>
+                    </a>
                 </div>
                 <div class="service-box">
-                    <img src="assets/panles_battery.jpg" alt="Solar System with Batteries">
-                    <h3>Solar System with Batteries</h3>
-                    <p>Get a complete solar solution with energy storage to maximize your savings.</p>
+                    <a href="#contact-form">
+                        <img src="assets/panles_battery.jpg" alt="Solar System with Batteries">
+                        <h3>Solar System with Batteries</h3>
+                        <p>Get a complete solar solution with energy storage to maximize your savings.</p>
+                    </a>
                 </div>
                 <div class="service-box">
-                    <img src="assets/batteries.webp" alt="Batteries">
-                    <h3>Batteries</h3>
-                    <p>Do you have solar panels and wish to add batteries, or just want to buy batteries? We've got you covered.</p>
+                    <a href="#contact-form">
+                        <img src="assets/batteries.webp" alt="Batteries">
+                        <h3>Batteries</h3>
+                        <p>Do you have solar panels and wish to add batteries, or just want to buy batteries? We've got you covered.</p>
+                    </a>
                 </div>
                 <div class="service-box">
-                    <img src="assets/solar_consult.png" alt="Free Consultation">
-                    <h3>Free Consultation</h3>
-                    <p>Get expert advice on how solar energy can reduce your bills and carbon footprint.</p>
+                    <a href="#contact-form">
+                        <img src="assets/solar_consult.png" alt="Free Consultation">
+                        <h3>Free Consultation</h3>
+                        <p>Get expert advice on how solar energy can reduce your bills and carbon footprint.</p>
+                    </a>
                 </div>
             </div>
         </section>
@@ -199,7 +209,7 @@
             </div>
         </section>
 
-        <section class="contact-form">
+        <section id= "contact-form" class="contact-form">
             <div class="form-container">
                 <h2>Contact Us for More Information</h2>
                 <form id="info-form" action="submit_form.php" method="POST" onsubmit="return redirectToThankYouPage(event)">
@@ -215,10 +225,10 @@
                     <label for="dropdown">How Can We Help?</label>
                     <select id="dropdown" name="dropdown" required>
                         <option value="" disabled selected>Select an option</option>
-                        <option value="consultation">Consultation</option>
-                        <option value="lease">Solar System Lease</option>
-                        <option value="buy">Solar System Purchase</option>
-                        <option value="batteries">Batteries</option>
+                        <option value="Consultation">Consultation</option>
+                        <option value="Solar System Lease">Solar System Lease</option>
+                        <option value="Solar System Purchase">Solar System Purchase</option>
+                        <option value="Batteries">Batteries</option>
                         <option value="other">Other</option>
                     </select>
         

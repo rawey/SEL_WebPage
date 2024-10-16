@@ -29,14 +29,21 @@ try {
 
     // Content
     $mail->isHTML(true);
-    $mail->Subject = 'New Contact Form Submission';
+    $mail->Subject = 'New Contact Form Submission - ' . date('Y-m-d H:i:s');
+
+    $otherText = isset($_POST['other-text']) && !empty($_POST['other-text']) ? htmlspecialchars($_POST['other-text']) : 'N/A';
+
+    $dropdownValue = htmlspecialchars($_POST['dropdown']);
+    if ($dropdownValue === 'other') {
+        $dropdownValue = 'Other';
+    }
+
     $mail->Body = '
     <html>
     <body>
         <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse;">
             <tr>
-                <th>Field</th>
-                <th>Input</th>
+                <th colspan="2" style="background-color: #91a5c7;">Potential Customer</th>
             </tr>
             <tr>
                 <td>Name</td>
@@ -52,11 +59,11 @@ try {
             </tr>
             <tr>
                 <td>How Can We Help</td>
-                <td>' . htmlspecialchars($_POST['dropdown']) . '</td>
+                <td>' . $dropdownValue . '</td>
             </tr>
             <tr>
                 <td>Other</td>
-                <td>' . htmlspecialchars($_POST['other-text']) . '</td>
+                <td>' . $otherText . '</td>
             </tr>
         </table>
     </body>
