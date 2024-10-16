@@ -296,13 +296,28 @@ const dropdown = document.getElementById('dropdown');
     function redirectToThankYouPage(event) {
         event.preventDefault(); // Prevent the form from submitting normally
     
-        if (currentLang === 'es') {
-            window.location.href = "gracias.html"; // Redirect to Spanish thank-you page
-        } else {
-            window.location.href = "thank-you.html"; // Redirect to English thank-you page
-        }
+        const form = document.getElementById('info-form');
+        const formData = new FormData(form);
+    
+        fetch('submit_form.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log(data); // For debugging purposes
+            if (currentLang === 'es') {
+                window.location.href = "gracias.html"; // Redirect to Spanish thank-you page
+            } else {
+                window.location.href = "thank-you.html"; // Redirect to English thank-you page
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    
+        return false; // Prevent the default form submission
     }
     
     function returnToMainPage() {
         window.location.href = "index.html"; // Change to the correct path of your main page
     }
+    

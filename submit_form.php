@@ -1,50 +1,69 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Capture form data
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $message = isset($_POST['other-text']) ? $_POST['other-text'] : $_POST['dropdown'];
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-    // Email settings
-    $to = "selsolarfl@gmail.com";
-    $subject = "New Contact Form Submission";
-    $body = "Name: $name\nEmail: $email\nPhone: $phone\nMessage: $message";
-    $headers = "From: $email";
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    // Sending email
-    if (mail($to, $subject, $body, $headers)) {
-        // Database connection
-        $servername = "localhost"; // or your Hostinger database server
-        $username = "u542894061_rawey08";
-        $password = "Solar#1!";
-        $dbname = "u542894061_sel_contacts";
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
-        $conn = new mysqli($servername, $username, $password, $dbname);
+$mail = new PHPMailer(true);
 
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+try {
+    //Server settings
+    $mail->SMTPDebug = 2; // Enable verbose debug output
+    $mail->isSMTP();
+    $mail->Host = 'smtp.hostinger.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'rawey.lugo@selsolarfl.com';
+    $mail->Password = 'Getsuga1!3310';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port = 465;
 
-        // Prepare and bind
-        $stmt = $conn->prepare("INSERT INTO sel_contacts (name, email, phone, message) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $name, $email, $phone, $message);
+    //Recipients
+    $mail->setFrom('rawey.lugo@selsolarfl.com', 'SEL Florida');
+    $mail->addAddress('selsolarfl@gmail.com');
 
-        // Execute and check
-        if ($stmt->execute()) {
-            // Redirect to thank you page
-            header("Location: thank_you.html");
-            exit();
-        } else {
-            echo "Error inserting data: " . $conn->error;
-        }
-
-        $stmt->close();
-        $conn->close();
-    } else {
-        echo "Email sending failed.";
-    }
+    // Content
+    $mail->isHTML(true);
+    $mail->Subject = 'New Contact Form Submission';
+    $mail->Body = '
+    <html>
+    <body>
+        <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse;">
+            <tr>
+                <th>Field</th>
+                <th>Input</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>' . htmlspecialchars($_POST['name']) . '</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>' . htmlspecialchars($_POST['email']) . '</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>' . htmlspecialchars($_POST['phone']) . '</td>
+            </tr>
+            <tr>
+                <td>How Can We Help</td>
+                <td>' . htmlspecialchars($_POST['dropdown']) . '</td>
+            </tr>
+            <tr>
+                <td>Other</td>
+                <td>' . htmlspecialchars($_POST['other-text']) . '</td>
+            </tr>
+        </table>
+    </body>
+    </html>';
+    $mail->send();
+    echo '<div style="color: green;">Message has been sent</div>';
+} catch (Exception $e) {
+    echo '<div style="color: red;">Message could not be sent. Mailer Error: ' . $mail->ErrorInfo . '</div>';
 }
 ?>
-
