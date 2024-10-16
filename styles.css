@@ -159,6 +159,15 @@ button:hover, #translate-btn:hover {
     transform: scale(1.05);
 }
 
+.service-box a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the entire service box clickable */
+}
+.service-box a:hover {
+    color: inherit; /* Ensure hover color remains the same */
+}
+
 .contact-form {
     display: flex;
     justify-content: center;
