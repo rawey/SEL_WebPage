@@ -254,15 +254,6 @@ function translateToSpanish() {
 // Add event listener to the button
 document.getElementById('translate-btn').addEventListener('click', translateToSpanish);
 
-
-document.querySelector('form').addEventListener('submit', function(event) {
-    const isChecked = document.getElementById('marketing-consent').checked || document.getElementById('marketing-consent-es').checked;
-    if (!isChecked) {
-        alert('You must agree to the terms to proceed.');
-        event.preventDefault(); // Prevent the form from being submitted
-    }
-});
-
 document.getElementById('info-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
     
